@@ -5,6 +5,8 @@
 }
 
 body {
+  width: 100%;
+  height: auto;
   background-color: #000;
   overflow: hidden;
 }
@@ -50,25 +52,27 @@ body {
     z-index: 1;
 }
 
+main{
+    width: 100%;
+    height: 400px;
+}
+
 /* nav barre */
-nav 
-{
+nav {
+    position:relative;
+    top: 70%;
     margin: 100px auto;
     width: 50%;
-    height: 100px;
-    background: #48435C;
-    
+    height: 100px;       
 }
  
-nav .menu 
-{
+nav .menu {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;  
 }
  
-nav .menu a 
-{
+nav .menu a {
     width: 20%;
     display: flex;
     align-items: center;
@@ -76,11 +80,16 @@ nav .menu a
     height: 100px;
     text-decoration: none;
     font-family: Arial, sans-serif;
+    font-size: 20px;
     color: rgb(4, 247, 255);
     z-index: 1000;
+    background: #1a0033; 
+    border-radius: 10px;
+    text-shadow: 0 0 10px aqua;
 }
  
-nav a:hover 
-{
-    background: #5A5766
+nav a:hover {
+    background: radial-gradient(ellipse at center, #1a0033 0%, #000011 100%);
+    border-radius: 10px;
+    border: 4px solid #ffffff; 
 }
