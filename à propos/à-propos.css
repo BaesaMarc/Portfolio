@@ -7,9 +7,18 @@ header {
 h1 {
     display: flex;
     justify-content: center;
-    background: #ed0b0b;
+    background: #000000;
+    position: fixed;
+    left: 45%;
+    color: azure;
+    font-size: 40px;
+    border-radius: 10px;
+    text-shadow:0 0 15px white;   
 }
 
 body {
+  width: 100%;
+  height: auto;
   margin: 0;
+  overflow: hidden;
 }
