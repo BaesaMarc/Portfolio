@@ -1,6 +1,6 @@
 'use strict';
         
-        var canvas = document.getElementById("inner_heading-canvas");
+        var canvas = document.getElementById("about-canvas");
 
         var mousePos = {
             x: 0,

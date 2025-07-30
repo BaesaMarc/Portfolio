@@ -1,0 +1,108 @@
+
+
+.home-page {
+    width: 100%;
+    height: auto;
+    background-color: #a09696;
+    overflow: hidden;
+
+    
+
+    .haut-de-page {
+
+        width: 100%;
+
+
+
+        .title {
+
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: aqua;
+            z-index: 1000;
+            font-size: 5rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 20px aqua;
+        }
+
+        .sub-title {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: aqua;
+            z-index: 1000;
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 10px aqua;
+        }
+
+       
+    }
+
+    .main_home_page {
+
+        width: 100%;
+        height: 400px;
+
+        .navBar {
+
+
+            position: relative;
+            top: 70%;
+            margin: 100px auto;
+            width: 50%;
+            height: 100px;
+
+
+            .menu {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    width: 20%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100px;
+                    text-decoration: none;
+                    font-family: Arial, sans-serif;
+                    font-size: 20px;
+                    color: rgb(4, 247, 255);
+                    z-index: 1000;
+                    background: #1a0033;
+                    border-radius: 10px;
+                    text-shadow: 0 0 10px aqua;
+
+                    &:hover {
+                        background: radial-gradient(ellipse at center, #1a0033 0%, #000011 100%);
+                        border-radius: 10px;
+                        border: 4px solid #ffffff;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+ #canvas {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #1a0033 0%, #000011 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }

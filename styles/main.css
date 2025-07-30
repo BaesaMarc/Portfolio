@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home-page {
+  width: 100%;
+  height: auto;
+  background-color: #a09696;
+  overflow: hidden;
+}
+.home-page .haut-de-page {
+  width: 100%;
+}
+.home-page .haut-de-page .title {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: aqua;
+  z-index: 1000;
+  font-size: 5rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 20px aqua;
+}
+.home-page .haut-de-page .sub-title {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: aqua;
+  z-index: 1000;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 10px aqua;
+}
+.home-page .main_home_page {
+  width: 100%;
+  height: 400px;
+}
+.home-page .main_home_page .navBar {
+  position: relative;
+  top: 70%;
+  margin: 100px auto;
+  width: 50%;
+  height: 100px;
+}
+.home-page .main_home_page .navBar .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-page .main_home_page .navBar .menu a {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: rgb(4, 247, 255);
+  z-index: 1000;
+  background: #1a0033;
+  border-radius: 10px;
+  text-shadow: 0 0 10px aqua;
+}
+.home-page .main_home_page .navBar .menu a:hover {
+  background: radial-gradient(ellipse at center, #1a0033 0%, #000011 100%);
+  border-radius: 10px;
+  border: 4px solid #ffffff;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #1a0033 0%, #000011 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+body #about-canvas {
+  z-index: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100vh;
+}
+body .about-me {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+body .about-me .up-page {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+body .about-me .up-page .about-title {
+  background: #000000;
+  position: fixed;
+  left: 45%;
+  color: azure;
+  font-size: 60px;
+  border-radius: 10px;
+  text-shadow: 0 0 15px white;
+}
+body .about-me .up-page .retour {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  margin-left: 5px;
+  margin-top: 30px;
+  justify-content: flex-start;
+  z-index: 100;
+  width: 100%;
+}
+body .about-me .container {
+  position: fixed;
+  color: rgb(255, 0, 0);
+  z-index: 1;
+  border: 3px solid white;
+}
+body .about-me .container .card-image {
+  width: 25%;
+  height: 200px;
+  border: 3px solid white;
+  display: flex;
+  justify-items: center;
+}
+body .about-me .container .card-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+body .about-me .container .card-text {
+  width: 100%;
+  border: 3px solid white;
+}
+
+/*# sourceMappingURL=main.css.map */
