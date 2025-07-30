@@ -20,61 +20,75 @@ body {
 
         .up-page {
             display: flex;
-            justify-content: center;
+            justify-content:space-around;
+            // align-items: center;
             overflow: hidden;
 
             .about-title {
                 // display: flex;
                 // align-items: center;
-                background: #000000;
-                // position: fixed;
-                left: 45%;
+                background: #00000000;
+                position: fixed;
+                // left: 45%;
                 color: azure;
                 font-size: 60px;
                 border-radius: 10px;
                 text-shadow: 0 0 15px white;
             }
 
-       
-
             .retour {
                 // position: fixed;
-                color: rgb(255, 255, 255);
+                color: white;
                 font-size: 30px;
                 margin-left: 5px;
                 margin-top: 30px;
-                justify-content: flex-start;
+                // justify-content: flex-start;
+                // align-items: flex-start;
                 z-index: 100;
                 // border: 3px solid white;
                 width: 100%;
+                align-content: flex-start;
+
+                &:hover{
+                    color: aqua;
+                }
             }
+
+        
 
 
         }
 
         .container {
             position: fixed;
+            height: 500px;
             color: rgb(255, 0, 0);
             z-index: 1;
             border: 3px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
 
             .card-image {
                 width: 25%;
                 height: 200px;
                 border: 3px solid white;
-                display: flex;
-                justify-items: center;
+                
             }
 
             .card-title {
-                display: flex;
-                justify-content: center;
+                padding: 30px;
                 font-size: 40px;
+                color: white;
+                text-shadow: 0 0 10px white;
             }
 
             .card-text {
-                width: 100%;
+                width: 80%;
+                height: 200px;
                 border: 3px solid white;
+                font-size: 25px;
             }
 
         }
