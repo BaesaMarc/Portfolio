@@ -6,8 +6,6 @@
     background-color: #a09696;
     overflow: hidden;
 
-    
-
     .haut-de-page {
 
         width: 100%;
@@ -30,6 +28,7 @@
 
         .sub-title {
             position: fixed;
+            padding: 30px;
             top: 30%;
             left: 50%;
             transform: translateX(-50%);
@@ -70,6 +69,7 @@
                     align-items: center;
                     justify-content: center;
                     height: 100px;
+                    text-align: center;
                     text-decoration: none;
                     font-family: Arial, sans-serif;
                     font-size: 20px;

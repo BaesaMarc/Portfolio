@@ -27,6 +27,7 @@
 }
 .home-page .haut-de-page .sub-title {
   position: fixed;
+  padding: 30px;
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
@@ -59,6 +60,7 @@
   align-items: center;
   justify-content: center;
   height: 100px;
+  text-align: center;
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-size: 20px;
@@ -88,6 +90,10 @@
 }
 
 body {
+  cursor: url(/assets/image/ufo.png), auto;
+}
+
+body {
   height: 100vh;
   overflow: hidden;
 }
@@ -113,7 +119,6 @@ body .about-me .up-page {
 }
 body .about-me .up-page .about-title {
   background: #000000;
-  position: fixed;
   left: 45%;
   color: azure;
   font-size: 60px;
