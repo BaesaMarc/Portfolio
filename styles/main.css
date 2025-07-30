@@ -89,8 +89,8 @@
   z-index: 1;
 }
 
-body {
-  cursor: url(/assets/image/ufo.png), auto;
+* {
+  cursor: url(/assets/image/ufocursor.png), auto;
 }
 
 body {
@@ -114,47 +114,56 @@ body .about-me {
 }
 body .about-me .up-page {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   overflow: hidden;
 }
 body .about-me .up-page .about-title {
-  background: #000000;
-  left: 45%;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
   color: azure;
   font-size: 60px;
   border-radius: 10px;
   text-shadow: 0 0 15px white;
 }
 body .about-me .up-page .retour {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 30px;
   margin-left: 5px;
   margin-top: 30px;
-  justify-content: flex-start;
   z-index: 100;
   width: 100%;
+  align-content: flex-start;
+}
+body .about-me .up-page .retour:hover {
+  color: aqua;
 }
 body .about-me .container {
   position: fixed;
+  height: 500px;
   color: rgb(255, 0, 0);
   z-index: 1;
   border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 body .about-me .container .card-image {
   width: 25%;
   height: 200px;
   border: 3px solid white;
-  display: flex;
-  justify-items: center;
 }
 body .about-me .container .card-title {
-  display: flex;
-  justify-content: center;
+  padding: 30px;
   font-size: 40px;
+  color: white;
+  text-shadow: 0 0 10px white;
 }
 body .about-me .container .card-text {
-  width: 100%;
+  width: 80%;
+  height: 200px;
   border: 3px solid white;
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=main.css.map */
