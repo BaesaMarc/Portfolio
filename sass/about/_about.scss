@@ -19,16 +19,15 @@ body {
         z-index: 1000;
 
         .up-page {
+            width: 100%;
             display: flex;
-            justify-content:space-around;
-            // align-items: center;
+            justify-content: center;
             overflow: hidden;
 
             .about-title {
-                // display: flex;
-                // align-items: center;
+                margin-top: 0 auto;
                 background: #00000000;
-                position: fixed;
+                // position: fixed;
                 // left: 45%;
                 color: azure;
                 font-size: 60px;
@@ -37,7 +36,8 @@ body {
             }
 
             .retour {
-                // position: fixed;
+                position: fixed;
+                left: 5px;
                 color: white;
                 font-size: 30px;
                 margin-left: 20px;
@@ -46,22 +46,22 @@ body {
                 // align-items: flex-start;
                 z-index: 100;
                 // border: 3px solid white;
-                width: 100%;
+                width: 50px;
                 align-content: flex-start;
+                float: left;
 
-                &:hover{
+                &:hover {
                     color: aqua;
                 }
             }
 
-        
 
 
         }
 
         .container {
             position: fixed;
-            height: 500px;
+            height: 90vh;
             color: rgb(255, 0, 0);
             z-index: 1;
             // border: 3px solid white;
@@ -75,7 +75,7 @@ body {
                 height: 200px;
                 border: 3px solid white;
                 border-radius: 20px;
-                
+
             }
 
             .card-title {
@@ -87,7 +87,7 @@ body {
 
             .card-text {
                 width: 80%;
-                height: 200px;
+                height: 220px;
                 margin: 5px;
                 padding: 20px;
                 border: 3px solid white;
@@ -98,9 +98,44 @@ body {
                 color: white;
             }
 
+            .link-cv {
+                color: white;
+
+                &:hover {
+                    color: aqua;
+                }
+
+            }
+
         }
 
 
     }
 
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(0, 0, 0);
+}
+
+.tooltip .tooltiptext {
+    font-size: 12px;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(238, 238, 238, 0.075);
+    color: #ececec;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    left: 50px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
