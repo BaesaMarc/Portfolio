@@ -1,33 +1,372 @@
 body {
     width: 100%;
-    height: 150vh;
+    // height: 150vh;
+    min-height: 100vh;
     overflow: hidden;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .head-projects{
         display: flex;
         justify-content: center;
+        color: white;
+        text-shadow: 0 0 15px;
     }
 
+    .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
 
+/* Canvas pour les circuits */
+#circuitCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 
+/* Microprocesseurs */
+.microprocessor {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
 
+.microprocessor:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
 
+.chip {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, #2a2a3a, #1a1a2a);
+    border: 2px solid #3a3a4a;
+    border-radius: 8px;
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.1),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
 
+.microprocessor:hover .chip {
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.6),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
 
+.chip-core {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #4a4a5a, #2a2a3a);
+    border: 1px solid #5a5a6a;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
 
+.chip-core::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #00ffff, #0080ff);
+    border-radius: 2px;
+    animation: coreGlow 2s ease-in-out infinite alternate;
+}
 
+@keyframes coreGlow {
+    0% { opacity: 0.6; box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); }
+    100% { opacity: 1; box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); }
+}
 
+/* Pins des microprocesseurs */
+.pins {
+    position: absolute;
+    background: linear-gradient(145deg, #6a6a7a, #4a4a5a);
+    border-radius: 1px;
+}
 
+.pins.top, .pins.bottom {
+    width: 4px;
+    height: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+.pins.top {
+    top: -8px;
+}
 
+.pins.bottom {
+    bottom: -8px;
+}
 
+.pins.left, .pins.right {
+    width: 8px;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.pins.left {
+    left: -8px;
+}
 
+.pins.right {
+    right: -8px;
+}
 
+.pins::before,
+.pins::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 1px;
+}
 
+.pins.top::before,
+.pins.bottom::before {
+    width: 4px;
+    height: 8px;
+    left: -15px;
+}
 
+.pins.top::after,
+.pins.bottom::after {
+    width: 4px;
+    height: 8px;
+    right: -15px;
+}
 
+.pins.left::before,
+.pins.right::before {
+    width: 8px;
+    height: 4px;
+    top: -15px;
+}
 
+.pins.left::after,
+.pins.right::after {
+    width: 8px;
+    height: 4px;
+    bottom: -15px;
+}
 
+/* Effet de brillance */
+.glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+    border-radius: 50%;
+    animation: glowPulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+/* Processeur principal */
+.main-processor {
+    z-index: 3;
+    top: 50%; left: 50%;
+}
+
+.main-chip {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(145deg, #3a3a4a, #2a2a3a);
+    border: 3px solid #4a4a5a;
+    box-shadow:
+        0 0 40px rgba(0, 255, 255, 0.6),
+        inset 0 3px 6px rgba(255, 255, 255, 0.2),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.main-processor:hover .main-chip {
+    box-shadow:
+        0 0 60px rgba(0, 255, 255, 0.8),
+        inset 0 3px 6px rgba(255, 255, 255, 0.3),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.main-chip .chip-core {
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #5a5a6a, #3a3a4a);
+    border: 2px solid #6a6a7a;
+}
+
+.main-chip .chip-core::before {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #00ffff, #0080ff);
+    animation: mainCoreGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes mainCoreGlow {
+    0% {
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.main-chip .pins {
+    background: linear-gradient(145deg, #7a7a8a, #5a5a6a);
+}
+
+.main-chip .pins.top,
+.main-chip .pins.bottom {
+    width: 6px;
+    height: 12px;
+}
+
+.main-chip .pins.top {
+    top: -12px;
+}
+
+.main-chip .pins.bottom {
+    bottom: -12px;
+}
+
+.main-chip .pins.left,
+.main-chip .pins.right {
+    width: 12px;
+    height: 6px;
+}
+
+.main-chip .pins.left {
+    left: -12px;
+}
+
+.main-chip .pins.right {
+    right: -12px;
+}
+
+.main-glow {
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+    animation: mainGlowPulse 2s ease-in-out infinite;
+}
+
+@keyframes mainGlowPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* Effets de survol pour l'animation */
+.microprocessor:hover .glow {
+    animation-duration: 1s;
+}
+
+.microprocessor:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chip {
+        width: 60px;
+        height: 60px;
+    }
+   
+    .chip-core {
+        top: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+    }
+   
+    .chip-core::before {
+        width: 15px;
+        height: 15px;
+    }
+   
+    .main-chip {
+        width: 90px;
+        height: 90px;
+    }
+   
+    .main-chip .chip-core {
+        top: 22px;
+        left: 22px;
+        width: 46px;
+        height: 46px;
+    }
+   
+    .main-chip .chip-core::before {
+        width: 22px;
+        height: 22px;
+    }
+   
+    .main-chip .pins.top,
+    .main-chip .pins.bottom {
+        width: 4px;
+        height: 8px;
+    }
+   
+    .main-chip .pins.top {
+        top: -8px;
+    }
+   
+    .main-chip .pins.bottom {
+        bottom: -8px;
+    }
+   
+    .main-chip .pins.left,
+    .main-chip .pins.right {
+        width: 8px;
+        height: 4px;
+    }
+   
+    .main-chip .pins.left {
+        left: -8px;
+    }
+   
+    .main-chip .pins.right {
+        right: -8px;
+    }
+}
 
 }
