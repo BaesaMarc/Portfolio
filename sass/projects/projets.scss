@@ -36,11 +36,26 @@ body {
     z-index: 2;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
+    color: white;
+    &:hover {
+    transform: translate(-50%, -50%) scale(1.1);   
+}
 }
 
-.microprocessor:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+.microprincipale{
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    // text-align: center;
+    &:hover{
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
 }
+
+
 
 .chip {
     position: relative;
@@ -369,4 +384,31 @@ body {
     }
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(0, 0, 0);
 }
+
+.tooltip .tooltiptext {
+    font-size: 12px;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(238, 238, 238, 0.075);
+    color: #ececec;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    left: 1px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+}
+

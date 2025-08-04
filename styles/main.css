@@ -300,8 +300,19 @@ body .microprocessor {
   z-index: 2;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease;
+  color: white;
 }
 body .microprocessor:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+body .microprincipale {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+body .microprincipale:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 body .chip {
@@ -572,6 +583,28 @@ body .microprocessor:active {
   body .main-chip .pins.right {
     right: -8px;
   }
+}
+body .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted rgb(0, 0, 0);
+}
+body .tooltip .tooltiptext {
+  font-size: 12px;
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(238, 238, 238, 0.075);
+  color: #ececec;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  left: 1px;
+  z-index: 1;
+}
+body .tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=main.css.map */
