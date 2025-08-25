@@ -1,6 +1,6 @@
-@use './utilities/reset';
-@use './home/home';
-@use './utilities/cursor';
-@use '../about/about.scss';
-@use '../projects/projets.scss';
-@use '../contact/contact.scss'
+
+@use './home';
+@use './cursor';
+@use './about';
+@use './projets.scss';
+@use './contact.scss'

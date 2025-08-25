@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .home-page {
   width: 100%;
   height: auto;
@@ -197,8 +191,6 @@
 }
 .about-body .about-me .about-container-card {
   height: auto;
-  color: rgb(253, 0, 0);
-  
   z-index: 1;
   display: flex;
   flex-direction: column;
