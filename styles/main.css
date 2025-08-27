@@ -806,8 +806,17 @@
     margin: 1rem 0;
   }
 }
-.body-contact .img-git {
-  position: relative;
+.body-contact .main-contact {
+  display: flex;
+  z-index: 1000;
+}
+.body-contact .main-contact .img-contact {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.body-contact .main-contact .img-git {
+  justify-content: center;
+  border: 3px solid black;
 }
 
 /*# sourceMappingURL=main.css.map */
