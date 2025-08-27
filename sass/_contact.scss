@@ -1,0 +1,111 @@
+.body-contact{
+    width: 100%;
+    height: auto;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --primary: #DFD0B8;
+    --accent: #ffffff;
+    --secondary: #948979;
+    --background: #ffffff;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 2px 10px #dfd0b875;
+    z-index: 2;
+}
+
+.navbar .logo {
+    font-size: 1.9rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav li a {
+    display: block;
+    margin: 0 2rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.09rem;
+}
+
+@media (max-width:744px) {
+
+    .navbar .nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        flex-direction: column;
+        background-color: var(--accent);
+        width: 50%;
+        padding: 5rem 3rem;
+    }
+
+    .navbar .nav li a {
+        margin: 1rem 0;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
