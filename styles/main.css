@@ -807,16 +807,24 @@
   }
 }
 .body-contact .main-contact {
-  display: flex;
-  z-index: 1000;
+  z-index: 1;
+  display: block;
 }
 .body-contact .main-contact .img-contact {
-  background-position: center;
-  background-repeat: no-repeat;
+  z-index: 2;
 }
 .body-contact .main-contact .img-git {
-  justify-content: center;
-  border: 3px solid black;
+  position: relative;
+  z-index: 3;
+  bottom: 50px;
+  left: 78%;
+  margin-top: -20%;
+}
+.body-contact .main-contact .img-git a {
+  height: 70px;
+  padding: 2px;
+  background-color: #615f5d;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

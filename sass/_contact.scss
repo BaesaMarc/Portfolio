@@ -81,32 +81,36 @@ body {
 } 
 
 .main-contact{
-display: flex;
-    // position:absolute;
-   z-index: 1000; 
 
+   
+   z-index: 1;
+   display:block;
 
-.img-contact{
+   .img-contact{
 
-    // position: relative;
-    // z-index: 1;
-    background-position: center;
-    background-repeat: no-repeat;
+    z-index: 2;
+
+   }
+   
+   .img-git{
     
+    position: relative;
+    z-index: 3;
+    bottom: 50px;
+    left: calc(78%);
+    margin-top: calc(-20%);
+    
+    a{
+        height: 70px;
+        padding: 2px;
+        background-color: #615f5d;
+        font-size: 50px;
+      
+    }
+   }
+   
 
 
-}  
-
-.img-git{
-    // position:relative;
-    
-    
-    justify-content: center;
-    
-    // margin-top: 20px;
-    border: 3px solid black;
-    // width: 5%;
-}
 
 }
 
