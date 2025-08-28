@@ -100,11 +100,20 @@ body {
     left: calc(78%);
     margin-top: calc(-20%);
     
+    
     a{
-        height: 70px;
-        padding: 2px;
-        background-color: #615f5d;
+        height: auto;
+        background-color: #9e1d1d;
         font-size: 50px;
+
+        :hover{
+           font-size: auto; 
+           padding: 3px;
+           width: auto;
+           height: auto; 
+           background-color: #ffffff;
+           border-radius: 5px;
+        }
       
     }
    }
